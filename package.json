@@ -1,0 +1,19 @@
+{
+  "name": "spendr-cli",
+  "version": "1.0.0",
+  "description": "simple expense tracker to manage your finances.",
+  "main": "bin/index.js",
+  "bin": {
+    "spendr": "./bin/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kartik labhshetwar",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "json2csv": "^6.0.0-alpha.2"
+  }
+}
