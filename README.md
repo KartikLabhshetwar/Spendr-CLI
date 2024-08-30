@@ -1,19 +1,21 @@
 # Spendr CLI
 
-**spendr-cli** is a simple command-line interface (CLI) tool that helps you manage your expenses. With spendr-cli, you can easily add, list, filter, delete, and export your expenses, as well as get summaries and set budgets.
+![Spendr CLI](https://img.shields.io/badge/Spendr-CLI-brightgreen)
+
+A simple and interactive CLI tool to manage your expenses effectively. Track your finances by adding, deleting, listing, filtering, and summarizing expenses with ease. Export your expense data to a CSV file for further analysis.
 
 ## Features
 
-- **Add Expenses**: Record your expenses with descriptions, categories, and amounts.
-- **List Expenses**: View all recorded expenses in a clean and organized format.
-- **Filter by Category**: Filter expenses by specific categories.
-- **Delete Expenses**: Remove expenses by their ID.
-- **Summary**: Get the total expenses, and set budgets to track spending.
-- **Export to CSV**: Export all your expenses to a CSV file for easy sharing or backup.
+- **Add Expenses**: Quickly add new expenses with description, amount, and category.
+- **Delete Expenses**: Remove any expense by its ID.
+- **List Expenses**: Display all recorded expenses in a structured format.
+- **Filter by Category**: Filter expenses by specific categories to better analyze spending.
+- **Monthly Summary**: View total expenses for a given month and check against a budget.
+- **Export to CSV**: Export all expenses to a CSV file for further analysis or backup.
 
 ## Installation
 
-To install spendr-cli, you need to have [Node.js](https://nodejs.org/) installed. You can then install the CLI globally using the following command:
+To install the `spendr-cli` tool, you need to have [Node.js](https://nodejs.org/) installed on your machine. Then, install the tool using npm:
 
 ```bash
 npm install -g spendr-cli
@@ -21,17 +23,23 @@ npm install -g spendr-cli
 
 ## Usage
 
-After installing, you can start using `spendr-cli` with the command `spendr`. Below are the available commands:
+You can use the `spendr-cli` to manage your expenses directly from the command line. Below are the available commands:
 
-### Add an Expense
+### Add a New Expense
 
 ```bash
-spendr add --desc <description> --cat <category> --amt <amount>
+spendr add
 ```
 
-- `--desc`: Description of the expense.
-- `--cat`: Category of the expense (e.g., food, travel, etc.).
-- `--amt`: Amount of the expense.
+This command will prompt you for the description, amount, and category of the expense.
+
+### Delete an Existing Expense
+
+```bash
+spendr delete
+```
+
+This command will prompt you for the ID of the expense you wish to delete.
 
 ### List All Expenses
 
@@ -39,78 +47,102 @@ spendr add --desc <description> --cat <category> --amt <amount>
 spendr list
 ```
 
-This command will list all the recorded expenses in a formatted table.
+This command will list all recorded expenses in a structured and readable format.
 
-### Filter by Category
-
-```bash
-spendr filter --cat <category>
-```
-
-- `--cat`: Category to filter by.
-
-### Delete an Expense
+### Filter Expenses by Category
 
 ```bash
-spendr delete --id <id>
+spendr filter
 ```
 
-- `--id`: ID of the expense to delete.
+This command will prompt you for the category to filter the expenses.
 
-### Get a Summary of Expenses
+### Get Monthly Summary and Check Budget
 
 ```bash
-spendr summary [--month <month>] [--budget <budget>]
+spendr summary
 ```
 
-- `--month`: (Optional) Filter expenses by month (1-12).
-- `--budget`: (Optional) Set a budget to track if expenses exceed it.
+This command will prompt you to enter the month and budget (optional). It will then display the total expenses for that month and check if you've exceeded your budget.
 
-### Export to CSV
+### Export Expenses to CSV
 
 ```bash
 spendr export
 ```
 
-This command exports all recorded expenses to a CSV file named `expenses.csv`.
+This command exports all expenses to a `expenses.csv` file in the current directory.
 
-## Example Usage
+## Example
 
-Add an expense:
+Here's an example of how you might interact with `spendr-cli`:
 
-```bash
-spendr add --desc "Lunch at a restaurant" --cat "Food" --amt 500
-```
+1. **Add an Expense:**
 
-List all expenses:
+    ```bash
+    $ spendr add
+    ```
 
-```bash
-spendr list
-```
+    ```plaintext
+    ? Enter the expense description: Lunch
+    ? Enter the expense amount: 200
+    ? Enter the expense category: Food
+    ```
 
-Filter expenses by category:
+    ```plaintext
+    Expense added successfully! (ID: 1)
+    ```
 
-```bash
-spendr filter --cat "Food"
-```
+2. **List Expenses:**
 
-Delete an expense by ID:
+    ```bash
+    $ spendr list
+    ```
 
-```bash
-spendr delete --id 2
-```
+    ```plaintext
+    ID    Date         Description               Amount     Category
+    1     2024-08-30   Lunch                     200.00     Food
+    ```
 
-Get a summary of expenses for March with a budget:
+3. **Filter by Category:**
 
-```bash
-spendr summary --month 3 --budget 10000
-```
+    ```bash
+    $ spendr filter
+    ```
 
-Export expenses to CSV:
+    ```plaintext
+    ? Enter the category to filter by: Food
+    ```
 
-```bash
-spendr export
-```
+    ```plaintext
+    # Expenses in the category 'Food':
+    # Lunch: Rs.200.00 on 2024-08-30
+    ```
+
+4. **Get a Monthly Summary:**
+
+    ```bash
+    $ spendr summary
+    ```
+
+    ```plaintext
+    ? Enter the month (1-12) to get expenses for, or leave blank for all: 8
+    ? Enter your budget, or leave blank if you don’t have one: 500
+    ```
+
+    ```plaintext
+    Total expenses for August: Rs.200.00
+    ```
+
+5. **Export Expenses to CSV:**
+
+    ```bash
+    $ spendr export
+    ```
+
+    ```plaintext
+    Expenses exported successfully to expenses.csv!
+    ```
 
 ## License
 
@@ -120,7 +152,12 @@ This project is licensed under the ISC License.
 
 **Kartik Labhshetwar**
 
-Feel free to reach out for any queries or contributions!
+- Twitter: [@code_kartik](https://twitter.com/code_kartik)
 
+## Contributions
 
-https://roadmap.sh/projects/expense-tracker
+Contributions, issues, and feature requests are welcome!
+
+---
+
+Happy spending! Keep track of your finances efficiently with `Spendr-CLI`.

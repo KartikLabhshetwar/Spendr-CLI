@@ -13,8 +13,11 @@
   "author": "kartik labhshetwar",
   "license": "ISC",
   "dependencies": {
+    "boxen": "^8.0.1",
     "chalk": "^5.3.0",
     "commander": "^12.1.0",
-    "json2csv": "^6.0.0-alpha.2"
+    "inquirer": "^10.1.8",
+    "json2csv": "^6.0.0-alpha.2",
+    "ora": "^8.1.0"
   }
 }

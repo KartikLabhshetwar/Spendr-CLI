@@ -12,12 +12,5 @@
     "category": "daily",
     "amount": 100,
     "date": "2024-08-30"
-  },
-  {
-    "id": 3,
-    "description": "college fees",
-    "category": "fees",
-    "amount": 80550,
-    "date": "2024-08-30"
   }
 ]
