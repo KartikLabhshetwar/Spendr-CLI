@@ -152,7 +152,12 @@ This project is licensed under the ISC License.
 
 **Kartik Labhshetwar**
 
-Feel free to reach out for any queries or contributions!
+- Twitter: [@code_kartik](https://twitter.com/code_kartik)
 
+## Contributions
 
-https://roadmap.sh/projects/expense-tracker
+Contributions, issues, and feature requests are welcome!
+
+---
+
+Happy spending! Keep track of your finances efficiently with `Spendr-CLI`.

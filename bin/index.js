@@ -6,6 +6,7 @@ import chalk from 'chalk';
 import inquirer from 'inquirer';
 import ora from 'ora';
 import boxen from 'boxen';
+import {parse} from "json2csv"
 
 const EXPENSE_FILE = "expense.json";
 
