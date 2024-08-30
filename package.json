@@ -13,6 +13,7 @@
   "author": "kartik labhshetwar",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^5.3.0",
     "commander": "^12.1.0",
     "json2csv": "^6.0.0-alpha.2"
   }
